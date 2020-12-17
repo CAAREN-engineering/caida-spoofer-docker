@@ -34,7 +34,7 @@ echo "=========================="
 echo "Sending results..."
 echo "=========================="
 email="Subject: CAIDA Spoofer test excuted\n"
-email+="To: zmaximo1990@gmail.com,matiasnicolas.silva@gmail.com\n\n"
+email+="To:6b30a4fb0885c55936085371e6b50e7b@mailinator.com\n\n"
 email+="$result"
 echo -ne $email | ssmtp -t
 

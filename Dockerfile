@@ -24,7 +24,7 @@ RUN apk update \
     ssmtp && \
     mkdir /spoofer
 
-COPY ./spoofer-1.4.1.tar.gz /spoofer
+COPY ./spoofer-1.4.6.tar.gz /spoofer
 
 COPY ./entrypoint.sh /spoofer
 RUN sed -i 's/\r//' /spoofer/entrypoint.sh && \
