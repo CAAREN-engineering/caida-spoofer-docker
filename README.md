@@ -14,11 +14,8 @@ susceptibility to spoofed source address IP packets.
 ## Run
 
 ```
-  docker run --network=host -it --rm zmaximo1990/caida-spoofer-docker:latest
+  docker run --network=host -it --rm caida-spoofer-docker:latest
 ```
 
-## Feedback
-
-Currently maintained by Máximo Zarza (zmaximo1990@gmail.com) and Matias Silve (matiasnicolas.silva@gmail.com)
-at UNLP (Universidad Nacional de La Plata).
-Feedback, improvements and bugfixes are welcome.
+## Original repo
+[caida-spoofer-docker](https://github.com/zmaximo1990/caida-spoofer-docker)
