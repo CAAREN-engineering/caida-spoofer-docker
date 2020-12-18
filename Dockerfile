@@ -36,13 +36,13 @@ COPY ./ssmtp.conf /etc/ssmtp
 WORKDIR /spoofer
 
 # Install CAIDA Spoofer and then cleanup
-RUN tar xzvf spoofer-1.4.1.tar.gz && \
-    cd spoofer-1.4.1 && \
+RUN tar xzvf spoofer-1.4.6.tar.gz && \
+    cd spoofer-1.4.6 && \
     ./configure && \
     make && \
     make install && \
     make clean && \
     cd .. && \
-    rm -rf spoofer-1.4.1 spoofer-1.4.1.tar.gz
+    rm -rf spoofer-1.4.6 spoofer-1.4.1.tar.gz
 
 ENTRYPOINT ["/spoofer/entrypoint.sh"]
