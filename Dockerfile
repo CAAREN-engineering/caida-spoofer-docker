@@ -20,8 +20,7 @@ RUN apk update \
     libpcap \
     libpcap-dev \
     whois \
-    curl \
-    ssmtp && \
+    curl && \
     mkdir /spoofer
 
 COPY ./spoofer-1.4.6.tar.gz /spoofer
@@ -30,8 +29,6 @@ COPY ./entrypoint.sh /spoofer
 RUN sed -i 's/\r//' /spoofer/entrypoint.sh && \
     chmod +x /spoofer/entrypoint.sh
 
-# Configure SSMTP to send tests results
-COPY ./ssmtp.conf /etc/ssmtp
 
 WORKDIR /spoofer
 

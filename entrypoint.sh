@@ -28,16 +28,3 @@ result+="HOST_AS:      $HOST_AS\n"
 result+="HOST_ISP:     $HOST_ISP\n"
 result+="URL_RESULT:   $URL_TEST_RESULT\n"
 echo -ne $result
-
-# Send results
-echo "=========================="
-echo "Sending results..."
-echo "=========================="
-email="Subject: CAIDA Spoofer test excuted\n"
-email+="To:6b30a4fb0885c55936085371e6b50e7b@mailinator.com\n\n"
-email+="$result"
-echo -ne $email | ssmtp -t
-
-echo "=========================="
-echo "Thanks! :)"
-echo "=========================="
