@@ -20,6 +20,7 @@ RUN apk update \
     libpcap \
     libpcap-dev \
     whois \
+    tcpdump \
     curl && \
     mkdir /spoofer
 
@@ -40,6 +41,6 @@ RUN tar xzvf spoofer-1.4.6.tar.gz && \
     make install && \
     make clean && \
     cd .. && \
-    rm -rf spoofer-1.4.6 spoofer-1.4.1.tar.gz
+    rm -rf spoofer-1.4.6
 
 ENTRYPOINT ["/spoofer/entrypoint.sh"]
