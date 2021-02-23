@@ -16,12 +16,15 @@ RUN apk update \
     && apk add --no-cache \
     qt5-qtbase \
     iputils \
+    hping3 \
     tcptraceroute \
     libpcap \
     libpcap-dev \
     whois \
     tcpdump \
+    busybox-extras \
     curl && \
+    apk add -X http://dl-dn.alpinelinux.org/alpine/edge/testing hping3 && \
     mkdir /spoofer
 
 COPY ./spoofer-1.4.6.tar.gz /spoofer
