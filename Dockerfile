@@ -16,7 +16,6 @@ RUN apk update \
     && apk add --no-cache \
     qt5-qtbase \
     iputils \
-    hping3 \
     tcptraceroute \
     libpcap \
     libpcap-dev \
