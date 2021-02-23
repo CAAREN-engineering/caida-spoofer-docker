@@ -23,7 +23,7 @@ RUN apk update \
     tcpdump \
     busybox-extras \
     curl && \
-    apk add -X http://dl-dn.alpinelinux.org/alpine/edge/testing hping3 && \
+    apk add hping3 --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
     mkdir /spoofer
 
 COPY ./spoofer-1.4.6.tar.gz /spoofer
